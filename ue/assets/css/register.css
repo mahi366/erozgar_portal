@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;            /* changed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2f3f5;
+  position: relative;
+  overflow-y: auto;             /* changed */
+  padding: 20px;                /* added for small screens */
+}
+
+/* Background circles */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: #bcd0e6;
+  z-index: 0;
+}
+
+.circle1 {
+  width: 350px;
+  height: 350px;
+  top: -80px;
+  left: -100px;
+}
+
+.circle2 {
+  width: 200px;
+  height: 200px;
+  bottom: 40px;
+  right: -60px;
+}
+
+/* Card */
+.card {
+  width: 380px;
+  background: linear-gradient(180deg, #1f5fb8, #1a57a8);
+  border-radius: 18px;
+  padding: 25px;
+  color: white;
+  z-index: 1;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.logo img {
+  width: 90px;
+  background: white;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+label {
+  font-size: 13px;
+  margin-top: 10px;
+  display: block;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #e9f0fb;
+}
+
+.btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #5bc0f2;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #3aa6e0;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #cfe8ff;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,183 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.home-hero {
+  position: relative;
+  padding: 40px 20px;
+
+  background:
+    linear-gradient(to right, rgba(175, 197, 245, 0.9), rgba(6, 37, 73, 0.7)),
+    url("../img/e2.PNG") center/cover no-repeat;
+
+  min-height: 300px;
+
+  text-align: left; /* center all text */
+  color: #000000;
+}
+
+/* HERO TEXT */
+.home-text {
+  max-width: 900px;
+}
+
+/* TITLE */
+.home-text h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* PARAGRAPH */
+.home-text p {
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   BUTTONS FIX (IMPORTANT)
+========================= */
+.home-buttons {
+  display: flex;
+  justify-content: left;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* MAIN BUTTON STYLE */
+.home-buttons a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+}
+
+/* PRIMARY BUTTON */
+.home-buttons .primary {
+  background: #1b3c74;
+  color: #fff;
+  border: 1px solid #1b3c74;
+}
+
+/* SECONDARY BUTTON */
+.home-buttons .secondary {
+  background: #1b3c74;
+  color: #fff;
+  border: 1px solid #1b3c74;
+}
+
+/* HOVER (LIGHT → DARK EFFECT) */
+.home-buttons a:hover {
+  background: #0f2a55;
+  transform: translateY(-2px);
+}
+
+/* CLICK EFFECT */
+.home-buttons a:active {
+  background: #0b1f3f;
+  transform: scale(0.97);
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+.section-title {
+ background: linear-gradient(to bottom, #eef3ff 0%, #d0d7f5 60%, #eff0fc 100%);
+  padding: 60px 20px 70px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   GRID SYSTEM
+========================= */
+.card-grid {
+background: linear-gradient(to bottom, #eef3ff 0%, #d0d7f5 60%, #eff0fc 100%);
+  display: grid;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+   padding: 60px 20px 70px;
+}
+
+.card-grid.four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card-grid.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* =========================
+   CARD
+========================= */
+.info-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
+.info-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+  .card-grid.four {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-grid.three {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-text h1 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-grid.four,
+  .card-grid.three {
+    grid-template-columns: 1fr;
+  }
+
+  .home-text h1 {
+    font-size: 22px;
+  }
+
+  .home-text p {
+    font-size: 14px;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-buttons a {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+}
